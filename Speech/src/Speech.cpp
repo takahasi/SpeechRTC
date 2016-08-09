@@ -119,7 +119,7 @@ RTC::ReturnCode_t Speech::onDeactivated(RTC::UniqueId ec_id)
 
 RTC::ReturnCode_t Speech::onExecute(RTC::UniqueId ec_id)
 {
-	if (!m_speakIn.isNew())
+	if (m_speakIn.isNew())
 	{
 		if (m_speakIn.read() == true)
 		{
